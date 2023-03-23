@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 
+// define the attributes passed to the card
 type TeamCardProps = {
   school: string;
   name: string;
@@ -8,6 +9,7 @@ type TeamCardProps = {
   state: string;
 };
 
+// create each team card
 const TeamCard: React.FC<TeamCardProps> = ({ school, name, city, state }) => {
   return (
     <div className="team-card">
@@ -18,6 +20,7 @@ const TeamCard: React.FC<TeamCardProps> = ({ school, name, city, state }) => {
   );
 };
 
+// define the attributes of the json we are going to use
 type TeamListProps = {
   teams: Array<{
     school: string;
@@ -27,6 +30,7 @@ type TeamListProps = {
   }>;
 };
 
+// display the teams cards
 const TeamList: React.FC<TeamListProps> = ({ teams }) => {
   return (
     <div className="team-list">
